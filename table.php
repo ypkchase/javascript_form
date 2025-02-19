@@ -34,8 +34,18 @@
             const inputFirstName = document.createElement("INPUT");
             inputFirstName.type = "text";
             inputFirstName.placeholder = "Enter First Name";
-            row2col2.append(inputFirstName);
+
+            const row3 = studentRecord.insertRow();
+            const row3col1 = row3.insertCell();
+            row3col1.colSpan = 2;
+
+            const submitButton = document.createElement("button");
+            submitButton.innerHTML = "Submit";
+            submitButton.type = "submit";
+            
             row2col1.append(inputLastName);
+            row2col2.append(inputFirstName);
+            row3col1.append(submitButton);
 
             console.log(studentRecord);
         </script>
